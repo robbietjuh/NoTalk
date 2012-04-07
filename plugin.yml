@@ -1,0 +1,9 @@
+name: NoTalk
+main: net.robbytu.bukkit.NoTalk.NoTalk
+version: 1.0
+author: RobbytuProjects
+commands:
+     notalk:
+          description: Used to interact with NoTalk
+          permission:
+          usage: /notalk
