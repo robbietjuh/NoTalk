@@ -1,6 +1,6 @@
 name: NoTalk
 main: net.robbytu.bukkit.NoTalk.NoTalk
-version: 1.0
+version: 1.1
 author: RobbytuProjects
 commands:
      notalk:

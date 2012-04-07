@@ -33,12 +33,12 @@ public class NoTalk extends JavaPlugin {
 		
 		if(cmd.getName().equalsIgnoreCase("notalk")) {
 			if(args.length == 0) {
-				sender.sendMessage("NoTalk version 1.0");
+				sender.sendMessage("NoTalk version 1.1");
 				sender.sendMessage("/notalk <define|remove|list|info>");
 				return true;
 			}
 			else if(args[0].equalsIgnoreCase("info")) {
-				sender.sendMessage("NoTalk 1.0 by RobbytuProjects");
+				sender.sendMessage("NoTalk 1.1 by RobbytuProjects");
 				sender.sendMessage(ChatColor.GRAY + "You are able to:");
 
 				if(!sender.hasPermission("notalk.define")) {
