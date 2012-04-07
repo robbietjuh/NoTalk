@@ -108,8 +108,25 @@ public class NoTalk extends JavaPlugin {
 				}
 				
 				// Get all worlds
-				Set<String> worlds = ((MemorySection)this.getConfig().get("region")).getKeys(false);
-				if(worlds.size() == 0) {
+				Set<String> worlds;
+				try {
+					/*
+					 *  	Fixes issue #1
+					 *  
+					 *  	Dirty workaround, so that, when there is no configuration file and an Exception is
+					 *  	thrown, it will be catched and the user will see that there are no regions defines.
+					 *  
+					 *  	It's a bit dirty, but it works :-)
+					 *  
+					 */
+					
+					worlds = ((MemorySection)this.getConfig().get("region")).getKeys(false);
+					if(worlds.size() == 0) {
+						sender.sendMessage(ChatColor.RED + "No NoTalk regions have been defined.");
+						return true;
+					}
+				}
+				catch(Exception ex) {
 					sender.sendMessage(ChatColor.RED + "No NoTalk regions have been defined.");
 					return true;
 				}
